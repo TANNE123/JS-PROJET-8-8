@@ -2,6 +2,13 @@
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  /* font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal; */
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 /* body css */
 body {
@@ -25,7 +32,8 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #a1be95;
+  background-color: #2c3e50;
+  /* background: linear-gradient(#ebf5fb,#e8daef,#e8f6f3); */
   position: fixed;
   z-index: 1;
   /* border: 1px solid; */
@@ -57,7 +65,6 @@ body {
   height: 60px;
   overflow: hidden;
   display: flex;
- 
 }
 
 .Logo_img {
@@ -65,19 +72,21 @@ body {
   height: 60px;
   filter: saturate(8);
   overflow: hidden;
-  /* filter: drop-shadow(10px 10px 15px rgba(97, 68, 230, 0.5)) !important; */
 }
 
 .input {
-  width: 250px;
-  height: 20px;
+  width: 300px;
+  height: 30px;
   padding: 5px;
   border: none;
+  margin: 0px 10px 0px 0xp;
   border-radius: 3px;
+  outline: none;
 }
 
 .log_in a {
   height: 25px;
+  /* color: #000; */
   color: #fff;
   text-decoration: none;
   margin-right: 50px;
@@ -85,10 +94,9 @@ body {
   padding: 20px 0px 20px 0px;
   overflow: hidden;
 }
-.log_in{
+.log_in {
   overflow: hidden;
 }
-
 
 /* Side Navigation Bar css */
 .main_body {
@@ -96,14 +104,18 @@ body {
   display: flex;
   flex-direction: row;
   margin: 70px 0px 0px 0px;
+  background-color: #3b7294bb;
 }
 
 .body_songs {
   width: 20vw;
-  height: 100%;
   display: flex;
   justify-content: center;
+  background-image: url("https://st.depositphotos.com/1993135/4798/i/450/depositphotos_47984341-stock-photo-music-background.jpg");
   /* border: 1px solid green; */
+  background-size: 20lvw 100vh;
+
+  background-repeat: no-repeat;
   height: 100% !important;
   padding: 0;
   margin: 20px 10px 0px 10px;
@@ -113,15 +125,12 @@ body {
 .parentDiv_left {
   width: 100%;
   height: 100vh;
-  background: linear-gradient(
-    rgba(255, 0, 0, 0.5),
-    rgba(0, 0, 255, 0.5),
-    rgb(100, 30, 22)
-  );
+  background-size: cover;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   display: inline-block;
   /* border: 1px solid red; */
   text-align: center;
+  color: #fff !important;
 }
 
 .home_div_btn,
@@ -169,17 +178,17 @@ body {
 .profile_details {
   margin: 10px;
   width: 77%;
-  
+  color: #000;
   padding: 0px 10px 20px 40px;
   font-size: 20px;
   text-align: left;
-  /* width: auto; */
   height: auto;
   /* border: 1px solid; */
   border-radius: 20px;
-  background: linear-gradient(#d4e6f1,#a9dfbf);
-  
+  background: linear-gradient(#d4e6f1, #a9dfbf);
+  z-index: 1;
   display: none;
+  box-shadow: 2px 2px 10px #fff;
 }
 .logOut_btn {
   background-color: transparent;
@@ -193,9 +202,7 @@ body {
   background-color: #eb0606;
   color: #fff;
   border: none;
-  
 }
-
 
 /* Main Content Area css */
 .parentDiv {
@@ -224,14 +231,10 @@ body {
   height: 100vh;
   border-radius: 19px;
   display: inline-block;
-  background: linear-gradient(
-    35deg,
-    #aeb6bf,
-    #b03a2e,
-    #2874a6,
-    #e8daef,
-    #8e44ad
-  );
+  background-image: url("https://img.freepik.com/free-vector/music-background_53876-90526.jpg");
+  background-size: cover;
+  opacity: 0.9;
+  color: #fff;
   /* border: 2px solid green; */
 }
 .childDiv {
@@ -260,11 +263,13 @@ body {
   border-radius: 3px;
 }
 #btn {
-  border: 1px solid;
+  border: 1px solid #fff;
+  color: #fff;
   width: auto;
   height: 20px;
   padding: 10px;
   cursor: pointer;
+  overflow: hidden;
 }
 
 .page_item.active {
@@ -285,6 +290,7 @@ body {
   height: 150px;
   object-fit: cover;
   border-radius: 10px;
+  border: 1px solid #fff;
 }
 
 .hover_div {
@@ -298,14 +304,14 @@ body {
   border-radius: 10px;
   box-shadow: -1px -1px 10px;
   background-color: #eb964c;
-  /* background: linear-gradient(#00bfff, #8e2de2, #6ee1c4); */
-  background-color: #fff;
+  background-color: transparent;
 }
 .hover_div:hover {
   font-weight: bold;
   font-size: 18px;
   color: black;
   box-shadow: 3px 3px 10px #cd6155;
+  background-color: #fff;
 }
 
 /* Music Button Styles Css */
@@ -369,7 +375,6 @@ h4 {
   font-size: 17px;
   color: #fff;
   margin: 10px;
-
 }
 #social {
   display: flex;
@@ -380,7 +385,7 @@ h4 {
 }
 
 @media (max-width: 600px) {
-  .nav_bar{
+  .nav_bar {
     width: 100%;
   }
   .home_div_btn,
@@ -399,11 +404,11 @@ h4 {
   }
   .parentDiv {
     width: 100vw;
-    height: 100% !important; 
+    height: 100% !important;
     border: 1px solid;
   }
-  .childDiv{
-      height: 100% !important;
+  .childDiv {
+    height: 100% !important;
   }
   .page {
     width: 100vw;
@@ -424,14 +429,15 @@ h4 {
     display: block;
     width: auto;
   }
-  .Logo_img,.Logo_btn{
-      width: auto;
+  .Logo_img,
+  .Logo_btn {
+    width: auto;
   }
-  .right_nav_bar{
-      width: 20vw;
-      text-align: center;
+  .right_nav_bar {
+    width: 20vw;
+    text-align: center;
   }
-  .left_nav_bar{
-      width: 70vw;
+  .left_nav_bar {
+    width: 70vw;
   }
 }

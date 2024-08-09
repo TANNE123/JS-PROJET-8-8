@@ -382,7 +382,7 @@ async function fetchData() {
   const search_btn = document.querySelector(".search-btn");
 
   home_div_btn.addEventListener("click", () => {
-    window.location.assign("./pagination.html");
+    window.location.assign("./index.html");
   });
   search_div_btn.addEventListener("click", () => {
     input_div.style.display = "block";
@@ -419,19 +419,20 @@ async function fetchData() {
   document.querySelector(".userPhone").innerHTML =
     "Phone No : " + profileDetails.phoneNo;
   document.querySelector(".userDate").innerHTML =
-    "Date Of birth : " + profileDetails.date;
+    "Date: " + profileDetails.date;
   document.querySelector(".userGender").innerHTML =
     "Gender : " + profileDetails.gender;
 
   // logout details -----------------
   document.querySelector(".logOut_btn").addEventListener("click", () => {
     alert("your account is log out");
+    logOut_btn.style.display = "none";
+    profile_details.style.display="none"
     localStorage.clear();
     userName.innerHTML = "";
     userPhone.innerHTML = "";
     userDate.innerHTML = "";
     userGender.innerHTML = "";
-    logOut_btn.style.display = "none";
   });
 }
 
